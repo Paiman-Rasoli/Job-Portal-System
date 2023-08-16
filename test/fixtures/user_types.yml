@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+hr:
+  id: 1
+  account_type: HR
+
+seeker:
+  id: 2
+  account_type: SEEKER
