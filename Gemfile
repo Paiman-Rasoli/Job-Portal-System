@@ -27,6 +27,12 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Custom Gem Installed For Application 
+
+gem 'mysql2', '~> 0.5.5'
+
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

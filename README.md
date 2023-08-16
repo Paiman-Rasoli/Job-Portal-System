@@ -4,12 +4,16 @@
 
 ## Overview
 
-This project is focused in develop a Backend REST API application using Ruby on Rails and MySQL.
-It consists of rest api end points for user management, profile management (Job Seeker/Employee),
+This project is focused on developing a Backend REST API application using Ruby on Rails and MySQL.
+It consists of rest API endpoints for user management, profile management (Job Seeker/Employee),
 and posting and looking up jobs. I try use latest version of Ruby on Rails and use best practice and
 techniques for developing this backend application.
 
-## Notes
+## Contribution
 
-- I would appreciate anyone to contribute on this app.
-- The readme will update on adding new future.
+I would appreciate anyone to contribute on this app. Please create an issue or use existence issues
+and create a non-protect branch and then create a PR against main. for now you can add me as re-viewer.
+
+### Project Setup
+
+- For database we use mysql please set your database for development in **config/database.yml**
