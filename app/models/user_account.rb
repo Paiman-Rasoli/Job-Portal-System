@@ -1,3 +1,4 @@
 class UserAccount < ApplicationRecord
-  belongs_to: UserType
+  belongs_to :UserType
+  has_secure_password
 end
