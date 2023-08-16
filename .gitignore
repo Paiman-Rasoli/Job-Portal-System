@@ -36,3 +36,4 @@
 
 #ignore database config to push, as it may be different for some users
 /config/database.yml
+config/database.yml
