@@ -31,11 +31,10 @@ jobs:
       - name: Install dependencies
         shell: bash -l {0}
         run: |
-          rvm use 3.2.2
           sudo gem install bundler
           bundle install --jobs 4 --retry 3
 
       - name: Run tests
         run: |
-          bin/rails db:migrate RAILS_ENV=test
-          bin/rails test RAILS_ENV=test
+          sudo bin/rails db:migrate RAILS_ENV=test
+          sudo bin/rails test RAILS_ENV=test
