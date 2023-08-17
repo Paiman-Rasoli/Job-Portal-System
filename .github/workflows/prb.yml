@@ -24,14 +24,13 @@ jobs:
           rvm --default use 3.2.2
 
       - name: Print ruby version
+        shell: bash -l {0}
         run: |
-          source /home/runner/.rvm/scripts/rvm
-          rvm use 3.2.2
           ruby -v
 
       - name: Install dependencies
+        shell: bash -l {0}
         run: |
-          source /home/runner/.rvm/scripts/rvm
           rvm use 3.2.2
           sudo gem install bundler
           bundle install --jobs 4 --retry 3
