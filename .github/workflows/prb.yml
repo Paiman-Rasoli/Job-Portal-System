@@ -35,6 +35,7 @@ jobs:
           bundle install --jobs 4 --retry 3
 
       - name: Run tests
+        shell: bash -l {0}
         run: |
-          sudo bin/rails db:migrate RAILS_ENV=test
-          sudo bin/rails test RAILS_ENV=test
+          sudo rails db:migrate RAILS_ENV=test
+          sudo rails test RAILS_ENV=test
