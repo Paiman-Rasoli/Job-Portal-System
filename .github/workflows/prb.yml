@@ -22,6 +22,7 @@ jobs:
           rvm list known
           rvm install "ruby-3.2.2"
           rvm --default use 3.2.2
+          ruby-v
 
       - name: Print ruby version
         run: ruby -v
