@@ -7,15 +7,25 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@v1.145.0
-        with:
-          ruby-version: 3.2.2
+        run: |
+          sudo apt-get update
+          sudo apt-get install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev
+          git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+          echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+          exec $SHELL
+          rbenv install 3.2.2
+          rbenv global 3.2.2
+
+      - name: Print ruby version
+        run: ruby --version
+
       - name: Install dependencies
         run: |
           gem install bundler
